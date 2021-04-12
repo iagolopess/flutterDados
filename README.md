@@ -1,16 +1,14 @@
-# dados
+# Dados
 
-A new Flutter project.
+Esse projeto tinha como objetivo principal ser um atividade para ser entregue na matéria de desenvolvimento mobile, da Faculdade Impacta de Tecnologia.
+Decidi, para por em prática, dar continuidade ao projeto para ir testando meus conhecimentos de ao decorrer do que for aprendendo em Flutter.
 
-## Getting Started
+## Algumas novidades sobre o projeto
 
-This project is a starting point for a Flutter application.
+### - Versão inicial 0.1
+ - Desenvolvida a tela de menu
+ - Desenvolvida a tela de jogo
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### - Versão inicial 0.2
+- Melhorado o Layout da Aplicação
+- Desenvolvida a lógica para gerar os números aleatórios
