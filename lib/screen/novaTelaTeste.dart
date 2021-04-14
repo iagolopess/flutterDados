@@ -1,3 +1,4 @@
+import 'package:dados/components/inputDeDados.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
@@ -9,8 +10,12 @@ class TelaDoJogoTeste extends StatefulWidget {
 }
 
 class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
-  int nextDiceImg = 2;
-  int score = 0;
+  int nextDiceImg = 1;
+  int pontosJogador = 0, pontosMaquina = 0;
+  final TextEditingController escolhaDoJogador = TextEditingController();
+  var mensagem = 'Resultado';
+  var dicaMensagem = "Somente números de 1 a 6";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +27,18 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            EditaCampo(
+              controlador: escolhaDoJogador,
+              rotulo: "Aposte um número",
+              dica: dicaMensagem,
+            ),
+            Row(
+              children: [
+                Text('Você: $pontosJogador'),
+                Text('Maquina: $pontosMaquina')
+              ],
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            ),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
               child: Row(
@@ -47,26 +64,44 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
                     onPressed: () {
                       setState(() {
                         nextDiceImg = Random().nextInt(6) + 1;
-                        score = score + nextDiceImg;
+                        final numeroJogado =
+                            int.tryParse(escolhaDoJogador.text);
+
+                        validaDigito(numeroJogado);
                       });
                     }),
+                Container(
+                  child: Text(
+                    '$mensagem',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  ),
+                  color: Colors.black87,
+                  padding: EdgeInsets.all(10),
+                  margin: EdgeInsets.all(10),
+                ),
               ],
             ),
-            Container(
-              child: Text(
-                'Pontos: $score',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 30,
-                ),
-              ),
-              color: Colors.black87,
-              padding: EdgeInsets.symmetric(horizontal: 40, vertical: 40),
-              margin: EdgeInsets.symmetric(horizontal: 0, vertical: 30),
-            )
           ],
         ),
       ),
     );
+  }
+
+  void validaDigito(int numeroJogado) {
+    if (numeroJogado < 1 || numeroJogado > 6) {
+      escolhaDoJogador.clear();
+      dicaMensagem = 'Número invalido';
+    } else {
+      if (numeroJogado == nextDiceImg) {
+        mensagem = 'Você ganhou';
+        pontosJogador += nextDiceImg;
+      } else {
+        mensagem = 'Você perdeu!';
+        pontosMaquina += nextDiceImg;
+      }
+    }
   }
 }

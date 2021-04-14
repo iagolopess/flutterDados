@@ -1,3 +1,5 @@
+import 'package:dados/components/btnMenu.dart';
+
 import 'package:flutter/material.dart';
 import 'novaTelaTeste.dart';
 /* import 'screenGame.dart'; */
@@ -24,23 +26,9 @@ class MainMenu extends StatelessWidget {
               height: 250,
               padding: EdgeInsets.all(20.20),
             ),
-            ElevatedButton(
-              child: Text(
-                "Um jogador",
-                style: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.black87,
-                onPrimary: Colors.white,
-                padding: EdgeInsets.symmetric(horizontal: 60, vertical: 20),
-              ),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return TelaDoJogoTeste();
-                }));
-              },
+            BtnCaminho(
+              tela: TelaDoJogoTeste(),
+              btnTexto: 'Um jogador',
             ),
           ],
         ),
