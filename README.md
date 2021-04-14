@@ -17,7 +17,7 @@ Decidi, para por em prática, dar continuidade ao projeto para ir testando meus 
 - Foi adicionado imagens para representar os dados
 - Nova dinâmica da lógica por trás do jogo reduzindo linha de código
 
-### Versão 1.0
+### -  Versão 1.0
 - Acho que dá pra chamar de versão 1.0 né?
 - Nessa versão do programa trago melhorias como:
   * Validação do input do usuário
