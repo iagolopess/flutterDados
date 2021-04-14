@@ -12,3 +12,7 @@ Decidi, para por em prática, dar continuidade ao projeto para ir testando meus 
 ### - Versão inicial 0.2
 - Melhorado o Layout da Aplicação
 - Desenvolvida a lógica para gerar os números aleatórios
+
+### - Versão inicial 0.3
+- Foi adicionado imagens para representar os dados
+- Nova dinâmica da lógica por trás do jogo reduzindo linha de código

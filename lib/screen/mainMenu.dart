@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'screenGame.dart';
+import 'novaTelaTeste.dart';
+/* import 'screenGame.dart'; */
 
 class MainMenu extends StatelessWidget {
   @override
@@ -10,9 +11,8 @@ class MainMenu extends StatelessWidget {
           children: <Widget>[
             Container(
               child: Text(
-                "Cê tem dado em casa?",
+                "Dices Party",
                 style: TextStyle(
-                  color: Colors.black87,
                   fontSize: 28,
                 ),
               ),
@@ -38,7 +38,7 @@ class MainMenu extends StatelessWidget {
               ),
               onPressed: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return TelaDoJogo();
+                  return TelaDoJogoTeste();
                 }));
               },
             ),

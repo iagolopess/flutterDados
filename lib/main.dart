@@ -7,14 +7,8 @@ class JogoDeDados extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.black,
-        accentColor: Colors.blueAccent[700],
-        buttonTheme: ButtonThemeData(
-          buttonColor: Colors.blueAccent[700],
-          textTheme: ButtonTextTheme.primary,
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       home: MainMenu(),
     );
   }

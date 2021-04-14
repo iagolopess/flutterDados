@@ -37,8 +37,7 @@ class NumeroAleatorioState extends State<GeraNumeroAleatorio> {
               padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
               alignment: Alignment.center,
             ),
-            onPressed: () =>
-                {_geraValoresDados(context), debugPrint('$numero')},
+            onPressed: () => {_geraValoresDados(context)},
           ),
           padding: EdgeInsets.only(top: 30),
           margin: EdgeInsets.only(bottom: 20),
@@ -51,7 +50,7 @@ class NumeroAleatorioState extends State<GeraNumeroAleatorio> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
         ),
         Row(
-          children: [
+          children: <Widget>[
             Container(
               child: Text(
                 '$numero',
