@@ -20,9 +20,7 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(
-          child: Text("Jogo de Dados"),
-        ),
+        title: Text("Jogo de Dados"),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -50,7 +48,7 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
@@ -63,12 +61,12 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton(
-                    child: Text('Aperte o botão'),
+                    child: Text('Jogar'),
                     style: ElevatedButton.styleFrom(
                       primary: Colors.black87,
                       onPrimary: Colors.white,
                       padding:
-                          EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                          EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                       alignment: Alignment.center,
                     ),
                     onPressed: () {
@@ -102,16 +100,18 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
 
   void validaDigito(int numeroJogado) {
     if (numeroJogado < 1 || numeroJogado > 6) {
-      escolhaDoJogador.clear();
       dicaMensagem = 'Número invalido';
     } else {
       if (numeroJogado == nextDiceImg) {
         mensagem = 'Você ganhou';
         pontosJogador += nextDiceImg;
+        dicaMensagem = "Somente números de 1 a 6";
       } else {
         mensagem = 'Você perdeu!';
         pontosMaquina += nextDiceImg;
+        dicaMensagem = "Somente números de 1 a 6";
       }
     }
+    escolhaDoJogador.clear();
   }
 }
