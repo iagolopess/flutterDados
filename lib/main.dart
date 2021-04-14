@@ -8,7 +8,11 @@ class JogoDeDados extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
+      theme: ThemeData(
+        primaryColor: Colors.grey[900],
+        accentColor: Colors.grey[300],
+        scaffoldBackgroundColor: Colors.grey[400],
+      ),
       home: MainMenu(),
     );
   }

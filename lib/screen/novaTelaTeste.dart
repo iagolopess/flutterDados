@@ -34,8 +34,18 @@ class TelaDoJogoStateTeste extends State<TelaDoJogoTeste> {
             ),
             Row(
               children: [
-                Text('Você: $pontosJogador'),
-                Text('Maquina: $pontosMaquina')
+                Text(
+                  'Você: $pontosJogador',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                ),
+                Text(
+                  'Maquina: $pontosMaquina',
+                  style: TextStyle(
+                    fontSize: 16,
+                  ),
+                )
               ],
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             ),
