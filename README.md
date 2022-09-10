@@ -10,7 +10,7 @@ Rápida descrição do objetivo de fazer esse projeto
 | :fire: Desafio     | Disciplina de Desenvolvimento Mobile curso de ADS Faculdade Impacta
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](./assets/demo-app.gif?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](./assets/demo-app.gif#vitrinedev)
 
 Esse projeto tinha como objetivo principal ser um atividade a entregue na matéria de desenvolvimento mobile, da Faculdade Impacta de Tecnologia.
 Decidi, para por em prática, dar continuidade ao projeto para ir testando meus conhecimentos de ao decorrer do que for aprendendo em Flutter.
